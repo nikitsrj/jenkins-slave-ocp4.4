@@ -1,0 +1,33 @@
+#Maintainer_Label: Nikit Swaraj <nikit.swaraj@global.ntt>
+# This will be part of the name of the container. It should match the job-id in index entry
+job-id: jenkins-slave-base-centos7 
+
+#the following are optional, can be left blank
+#defaults, where applicable are filled in
+#nulecule-file   : nulecule
+
+# This flag tells the container pipeline to skip user defined tests on their container
+test-skip       : True
+
+# This is path of the script that initiates the user defined tests. It must be able to
+# return an exit code.
+test-script     : null
+
+# This is the path of custom build script.
+build-script    : null
+
+# This is the path of the custom delivery script
+delivery-script : null
+
+# This flag tells the pipeline to deliver this container to docker hub.
+docker-index    : True
+
+# This flag can be used to enable or disable the custom delivery
+custom-delivery : False
+
+# This flag can be used to enable or disable delivery of container to local registry
+local-delivery  : True
+
+Upstreams       :
+        - ref           :
+          url           :
